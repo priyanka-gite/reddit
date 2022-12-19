@@ -1,0 +1,33 @@
+.main-page{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color:var(--licht-oranje);
+}
+.each-box{
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    margin: 50px;
+    padding: 50px;
+    width: 350px;
+    height: 250px;
+    background-color: var(--wit);
+    border: 1px var(--wit);
+    box-shadow: 1px 1px 25px  lightgray;
+}
+h3{
+    color: var(--zwart);
+    font-family: Quicksand;
+}
+p{
+    color: var(--zwart);
+}
+.normal-text{
+    color: var(--zwart);
+    font-family: "Roboto Condensed";
+}

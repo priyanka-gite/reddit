@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*....FONTS...*/
+.heading-font {
+    font-family: 'Quicksand', sans-serif;
+}
+.text-font {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+:root {
+    --rood : #dd3038;
+    --oranje: #e7613a;
+    --licht-oranje: #FDF4F2;
+/*(voor standaard tekst);*/
+    --zwart: #292929;
+    --wit: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.unlisted-items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color:var(--wit);
+    background-color:var(--oranje);
+    list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.listed-items {
+    margin: 1em;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--oranje);
+   padding: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.logo-resize{
+    height: 105px;
+    width: 105px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color:var(--licht-oranje);
 }
