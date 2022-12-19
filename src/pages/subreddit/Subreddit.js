@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Link,useParams} from "react-router-dom";
+import Header from "../../components/header/Header";
 
 
 function Subreddit() {
@@ -12,7 +13,7 @@ function Subreddit() {
             const response = await axios.get(`https://www.reddit.com/r/${subredditId}/about.json`)
             console.log(response.data.data)
             console.log(response.data.data.description)
-           setAboutSubReddit(response.data)
+            setAboutSubReddit(response.data)
 
         }
         catch(e) {
@@ -33,16 +34,17 @@ function Subreddit() {
 
     return (
         <>
-        {
-            aboutSubReddit &&
-                    <>
-                    <div> Subredit</div>
 
+            {
+                aboutSubReddit &&
+                <>
+
+                    <div>Title: {aboutSubReddit.data.title}</div>
                     <div>{aboutSubReddit.data.description}</div>
-
+                    <div>Subscribers: {aboutSubReddit.data.subscribers}</div>
                     <div> ... <Link to="/">Take me back </Link></div>
-                    </>
-        }
+                </>
+            }
         </>
     );
 }

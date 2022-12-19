@@ -42,9 +42,10 @@ function Home(props) {
                 {reddit.map((sub)=>{
                     return(
                         <article className="each-box">
-                            <h3 > <Link to={`/subreddit/${sub.data.subreddit}`}>{sub.data.subreddit} </Link></h3>
+                            <h3><Link to={`/subreddit/${sub.data.subreddit}`}>{sub.data.subreddit} </Link></h3>
                             <div>
                                 <a href={sub.data.url}> {sub.data.title}</a>
+
                                 <p>Comments {sub.data.num_comments} -
                                     Ups {sub.data.ups} </p>
                             </div>
